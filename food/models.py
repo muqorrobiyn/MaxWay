@@ -12,6 +12,9 @@ class Product(models.Model):
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
     cost = models.IntegerField(null=False, blank=False)
     price = models.IntegerField(null=False, blank=False)
+    flesh_sale = models.BooleanField(default=False)
+    spicy = models.BooleanField(default=False)
+    cheese = models.BooleanField(default=False)
     image = models.ImageField(upload_to='products')
     created_at = models.DateTimeField(auto_now_add=True)
     def __str__(self):

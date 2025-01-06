@@ -34,7 +34,12 @@
                                         <th>Description</th>
                                         <th>Cost</th>
                                         <th>Price</th>
-                                        <th>Created at</th>
+                                        <th>Categor</th>
+                                        <th>Flesh_sale</th>
+                                        <th>Spicy</th>
+                                        <th>Cheese</th>
+                                        <th>Created_at</th>
+                                        <th>Actions</th>
 
                                         <th></th>
 
@@ -49,6 +54,10 @@
                                         <td>{{ product.description }}</td>
                                         <td>{{ product.cost }}</td>
                                         <td>{{ product.price }}</td>
+                                        <td>{{ product.category.title }}</td>
+                                        <td>{{ product.flesh_sale }}</td>
+                                        <td>{{ product.spicy }}</td>
+                                        <td>{{ product.cheese }}</td>
                                         <td>{{ product.created_at }}</td>
 
                                         <td>
