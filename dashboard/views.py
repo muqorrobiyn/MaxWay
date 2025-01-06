@@ -117,7 +117,7 @@ def user_delete(request,pk):
 def category_create(request):
     """This is the metod for creating product categories: Pizzas, Burgers..."""
     model = Category()
-    form = forms.CategoryForm(request.POST or None, instance=model)
+    form = forms.CategoryForm(request.POST , instance=model)
     if request.POST and form.is_valid():
         form.save() # form is saved
         return redirect('category_list')

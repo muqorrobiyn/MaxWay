@@ -30,16 +30,16 @@
                                 <form method="post" enctype="multipart/form-data">
                                     {% csrf_token %}
                                     <div class="form-group">
-                                        <label class=" form-control-label">Name</label>
-                                        {{form.first_name}}
-                                        <label  class=" form-control-label">Description</label>
-                                        {{form.last_name}}
-                                        <label  class=" form-control-label">Category</label>
-                                        {{form.phone_number}}
+                                        <label class=" form-control-label">First_name</label>
+                                        {{ form.first_name }}
+                                        <label  class=" form-control-label">Last_name</label>
+                                        {{ form.last_name }}
+                                        <label  class=" form-control-label">Phone_number</label>
+                                        {{ form.phone_number }}
 
                                     </div>
 
-                                    {% if model %}
+                                    {% if form.instance.pk %}
                                     <button type="submit" class="btn btn-warning btn-md">Save</button>
                                     {% else %}
                                     <button type="submit" class="btn btn-success btn-md">Add</button>
